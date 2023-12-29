@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="comic.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-sky color="cyan"></a-sky>
+
+      <a-entity id="placesContainer" comic></a-entity>
+
+      
+
+      <a-camera position="30 0 30 " id="camera" wasd-controls="enabled:false;">
+
+        <a-entity
+      id="camera-cursor"
+      cursor
+      position="0 0 -1"
+      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+      material="color:yellow; shader: flat"
+    >
+    </a-entity>
+        <a-entity
+          id="app-title"
+          position="0 0.73 -1"
+          text="font: exo2bold; align: center; width: 2; color: #000; value: The world of comics"
+        >
+          <a-entity
+            id="app-subtitle"
+            position="0 -0.1 0"
+            text="font: dejavu; align: center; width: 1; color: #0F184E; value: See it visualy"
+          ></a-entity>
+        </a-entity>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
